@@ -4,10 +4,10 @@ localhost:
       config_file: ../config/instances.yaml
       connection: local
       ansible_connection: local
-#container_hosts:
-#  hosts:
-#    192.168.1.100:
-#      ansible_ssh_pass: contrail123
+container_hosts:
+  hosts:
+    192.168.44.114:
+      ansible_ssh_pass: s0e1a2n3
 #    192.168.1.101:
 #      ansible_ssh_pass: contrail123
 #    192.168.1.102:

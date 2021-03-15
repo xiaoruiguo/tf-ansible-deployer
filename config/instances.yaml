@@ -1,10 +1,27 @@
 provider_config:
   bms:
+    ssh_pwd: s0e1a2n3
+    ssh_user: root
+    ssh_public_key: /root/.ssh/id_rsa.pub
+    ssh_private_key: /root/.ssh/id_rsa
 instances:
   bms1:
     provider: bms
-    ip: 192.168.1.100
+    roles:
+      config_database:
+      config:
+      control:
+      analytics_database:
+      analytics:
+      webui:
+      vrouter:
+      kubemanager:
+      k8s_master:
+      k8s_node:
+    ip: 192.168.44.114
 global_configuration:
-  CONTAINER_REGISTRY: michaelhenkel
+  CONTAINER_REGISTRY: tungstenfabric
+  K8S_VERSION: "1.20.4"
+  K8S_DASHBOARD_VERSION: "2.2.0"
 contrail_configuration:
-  CONTRAIL_VERSION: queens-5.0-20180219195722
+  CONTRAIL_VERSION: latest
