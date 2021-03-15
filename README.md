@@ -18,8 +18,8 @@ git clone -b R5.0 http://github.com/tungstenfabric/tf-ansible-deployer
 git clone http://github.com/tungstenfabric/tf-ansible-deployer
 cd tf-ansible-deployer
 ansible-playbook -i inventory/ -e orchestrator=kubernetes -e '{"instances":{"bms1":{"ip":"192.168.1.100","provider":"bms"}}}' playbooks/configure_instances.yml
-ansible-playbook -i inventory/ -e orchestrator=kubernetes -e '{"instances":{"bms1":{"ip":"192.168.1.100","provider":"bms"}}}' playbooks/install_contrail.yml
 ansible-playbook -i inventory/ -e orchestrator=kubernetes -e '{"instances":{"bms1":{"ip":"192.168.1.100","provider":"bms"}}}' playbooks/install_k8s.yml
+ansible-playbook -i inventory/ -e orchestrator=kubernetes -e '{"instances":{"bms1":{"ip":"192.168.1.100","provider":"bms"}}}' playbooks/install_contrail.yml
 ```
 The ip address 192.168.1.100 has to be replaced with the instances ip address
 
