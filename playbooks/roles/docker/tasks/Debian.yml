@@ -13,12 +13,14 @@
 
 - name: add docker repo key
   apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
+    url: https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg
+#    url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
 - name: create docker repo
   apt_repository:
-    repo: "deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    repo: "deb https://mirrors.aliyun.com/docker-ce/linux/ubuntu {{ ansible_distribution_release }} stable"
+#    repo: "deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
     state: present
 
 - name: install docker

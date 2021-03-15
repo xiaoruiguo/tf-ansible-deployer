@@ -1,9 +1,9 @@
 provider_config:
   bms:
-    ssh_pwd: s0e1a2n3
-    ssh_user: root
-    ssh_public_key: /root/.ssh/id_rsa.pub
-    ssh_private_key: /root/.ssh/id_rsa
+#    ssh_pwd: root
+#    ssh_user: s0e1a2n3
+#    ssh_public_key: /root/.ssh/id_rsa.pub
+#    ssh_private_key: /root/.ssh/id_rsa
 instances:
   bms1:
     provider: bms
@@ -18,7 +18,7 @@ instances:
       kubemanager:
       k8s_master:
       k8s_node:
-    ip: 192.168.44.114
+    ip: 192.168.33.180
 global_configuration:
   CONTAINER_REGISTRY: tungstenfabric
   K8S_VERSION: "1.20.4"

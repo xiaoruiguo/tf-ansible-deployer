@@ -3,8 +3,10 @@
   yum_repository:
     name: dockerrepo
     description: Docker Repository
-    baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
-    gpgkey: https://download.docker.com/linux/centos/gpg
+    baseurl: https://mirrors.aliyun.com/docker-ce/linux/centos/7/$basearch/stable
+    gpgkey: https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
+#    baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+#    gpgkey: https://download.docker.com/linux/centos/gpg
     gpgcheck: yes
   when: docker_mirror_url is not defined
 

@@ -6,8 +6,12 @@ localhost:
       ansible_connection: local
 container_hosts:
   hosts:
-    192.168.44.114:
-      ansible_ssh_pass: s0e1a2n3
+    192.168.33.180:
+      ansible_become: yes
+      ansible_ssh_user: vagrant
+      ansible_ssh_pass: vagrant
+      ansible_become_user: root
+      ansible_become_pass: s0e1a2n3
 #    192.168.1.101:
 #      ansible_ssh_pass: contrail123
 #    192.168.1.102:
