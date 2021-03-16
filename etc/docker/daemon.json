@@ -1,0 +1,9 @@
+{
+    "insecure-registries": [
+        "https://q03hxd52.mirror.aliyuncs.com", 
+        "localhost:5001",
+        "https://index.docker.io"
+    ], 
+    "live-restore": true, 
+    "mtu": 1500
+}
